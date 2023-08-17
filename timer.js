@@ -1,12 +1,3 @@
-const readline = require("readline");
-const process = require("process");
-
-// Create a readline interface for reading user input
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
 // Function to play a beep sound
 function playBeep() {
   process.stdout.write("\x07"); // Produces a beep sound
@@ -33,9 +24,4 @@ args.forEach((arg) => {
       `Invalid argument: ${arg}. Please provide a valid number of seconds.`
     );
   }
-});
-
-// Close the readline interface on user input
-rl.question("Press Enter to exit...", () => {
-  rl.close();
 });
